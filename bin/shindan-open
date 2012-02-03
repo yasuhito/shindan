@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+# -*- coding: utf-8 -*-
+#
+# 引数に診断したい名前を渡すと、診断結果をブラウザで開きます。
+#
+# % ./bin/shindan-open "高宮 安仁"
+#
+
+
+$LOAD_PATH.unshift File.expand_path( File.join File.dirname( __FILE__ ), "..", "lib" )
+
+
+require "shindan"
+
+
+if ARGV[ 0 ].nil?
+  puts "Usage: #{ __FILE__ } YOUR_NAME"
+  exit false
+end
+Shindan.new.open ARGV[ 0 ]
