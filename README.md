@@ -1,6 +1,7 @@
 # shindan
 
-診断メーカーを Ruby から使うためのライブラリです。
+診断メーカー http://shindanmaker.com/ を Ruby から使うためのライブラリです。
+
 
 ## Contributing to shindan
  
@@ -12,8 +13,7 @@
 * Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
 * Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
 
+
 ## Copyright
 
-Copyright (c) 2012 Yasuhito Takamiya. See LICENSE.txt for
-further details.
-
+Copyright (c) 2012 Yasuhito Takamiya
