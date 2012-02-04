@@ -14,6 +14,7 @@ require 'rake'
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
+  gem.version = File.read("VERSION").chomp
   gem.name = "shindan"
   gem.homepage = "http://github.com/yasuhito/shindan"
   gem.license = "GPL3"
