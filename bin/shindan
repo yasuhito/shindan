@@ -1,29 +1,16 @@
 #!/usr/bin/env ruby
-# -*- coding: utf-8 -*-
 #
-# 引数に診断したい名前を渡すと、診断結果を標準出力に出します。
-#
-#   % ./bin/shindan "高宮 安仁"
-#   高宮 安仁が生まれてきた使命・・・『地　球　に　降　り　注　ぐ　隕　石　を　食　い　止　め　人　類　を　滅　亡　か　ら　救　う　為』
-#
-# 診断を変えたいときには、診断メーカーの URL の最後の数字、たとえば
-# http://shindanmaker.com/189037 であれば 189037 の部分を第二引数に渡してください。
-#
-#   % ./bin/shindan "高宮 安仁" 189037
-#
+# % ./bin/shindan YOUR_NAME
+# % ./bin/shindan YOUR_NAME SHINDAN_ID
 
+$LOAD_PATH.unshift File.expand_path(File.join __dir__, '..', 'lib')
 
-$LOAD_PATH.unshift File.expand_path( File.join File.dirname( __FILE__ ), "..", "lib" )
+require 'shindan'
 
+DEFAULT_SHINDAN_ID = 163_723
 
-require "shindan"
-
-
-DEFAULT_SHINDAN_ID = 163723
-
-
-if ARGV[ 0 ].nil?
-  puts "Usage: #{ __FILE__ } YOUR_NAME [SHINDAN_ID]"
+if ARGV[0].nil?
+  puts "Usage: #{__FILE__} YOUR_NAME [SHINDAN_ID]"
   exit false
 end
-puts Shindan.new( ARGV[ 1 ] || DEFAULT_SHINDAN_ID ).get( ARGV[ 0 ] )
+puts Shindan.new(ARGV[1] || DEFAULT_SHINDAN_ID).get(ARGV[0])
