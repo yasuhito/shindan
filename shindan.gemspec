@@ -23,6 +23,10 @@ Gem::Specification.new do | gem |
   gem.test_files = `git ls-files -- {spec,features}/*`.split("\n")
 
   gem.add_dependency 'mechanize', '~> 2.7.3'
+
+  gem.add_development_dependency 'rake'
+  gem.add_development_dependency 'rspec', '~> 3.0.0'
+  gem.add_development_dependency 'rubocop', '~> 0.24.0'
 end
 
 ### Local variables:

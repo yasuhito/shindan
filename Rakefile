@@ -1,5 +1,4 @@
 # encoding: utf-8
-require 'rubygems'
 require 'bundler/gem_tasks'
 
 task default: [:spec, :rubocop]
@@ -11,7 +10,7 @@ RSpec::Core::RakeTask.new(:spec) do |spec|
 end
 
 require 'rubocop/rake_task'
-Rubocop::RakeTask.new do |task|
+RuboCop::RakeTask.new do |task|
   task.patterns = %w(lib/**/*.rb
                      spec/**/*.rb
                      Rakefile
